@@ -59,6 +59,8 @@ Ciphers that replace each plaintext symbol with another symbol. The key decides 
 
 > *The whole chapter is one escalating argument: fix the shift, scramble the alphabet, then change the shift every letter — each step exists because the one before it was easy to break.*
 
+</details>
+
 ---
 
 ## ◈ The Math Behind the Name

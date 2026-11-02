@@ -7,7 +7,7 @@
 ![Language](https://img.shields.io/badge/Language-Python_3-0b7285?style=for-the-badge&logo=python&logoColor=white&labelColor=0e1621)
 ![Focus](https://img.shields.io/badge/Focus-Ciphers_%26_Modular_Arithmetic-5b6b7d?style=for-the-badge&labelColor=0e1621)
 ![Semester](https://img.shields.io/badge/Semester-4-0b7285?style=for-the-badge&labelColor=0e1621)
-![Ciphers](https://img.shields.io/badge/Ciphers-2_Implemented-5b6b7d?style=for-the-badge&labelColor=0e1621)
+![Ciphers](https://img.shields.io/badge/Ciphers-3_Implemented-5b6b7d?style=for-the-badge&labelColor=0e1621)
 ![Status](https://img.shields.io/badge/Status-🔨_Actively_Growing-0b7285?style=for-the-badge&labelColor=0e1621)
 
 <br/><br/>
@@ -42,8 +42,11 @@ infosec-modulo/
         ├── caesar/
         |   └── caesar.py
         |
-        └── monoalphabetic/         
-            └── monoalphabetic.py
+        ├── monoalphabetic/         
+        |   └── monoalphabetic.py
+        |
+        └── keyword_cipher/
+            └── keyword_cipher.py
 ```
 
 Ciphers are grouped by **type**, one folder per cipher. New labs go into the matching group — a new group only appears when a genuinely new category of cipher shows up.
@@ -62,6 +65,7 @@ Ciphers that replace each plaintext symbol with another symbol. The key decides 
 |---|---|---|---|
 | **Caesar** | Monoalphabetic | An integer shift `k` | Shift every letter by a fixed number of positions: `E(x) = (x + k) mod 26` |
 | **Monoalphabetic Substitution** | Monoalphabetic | A full permutation of the alphabet | Each letter maps to a unique letter; the key *is* the mapping |
+| **Keyword Cipher** | Monoalphabetic | A secret keyword | Build the cipher alphabet from the keyword's unique letters, then append the unused letters in order |
 
 > *The whole chapter is one escalating argument: fix the shift, scramble the alphabet, then change the shift every letter — each step exists because the one before it was easy to break.*
 
@@ -75,6 +79,7 @@ Ciphers that replace each plaintext symbol with another symbol. The key decides 
 |---|---|
 | **Addition mod 26** | Caesar |
 | **Permutations** | Monoalphabetic substitution |
+| **Constructed permutations** | Keyword cipher |
 ---
 
 ## ◈ The Idea in Code
@@ -104,6 +109,7 @@ Every script exposes the same pair — **`encrypt(plaintext, key)`** and **`decr
 | **One cipher, one folder, one script** | Each file stands alone and is easy to find |
 | **Docstring header** | Every script opens with the cipher, its key format, and how it works |
 | **Round-trip verified** | Decrypting an encrypted message must return the original text |
+| **Standard library first** | Most scripts need nothing beyond Python itself — any exception is stated in that script's header |
 
 ---
 
@@ -116,6 +122,7 @@ git clone https://github.com/MuhammadAhmadHamim/infosec-modulo.git
 # Every script runs standalone from the repo root
 python substitution/caesar/caesar.py
 python substitution/monoalphabetic/monoalphabetic.py
+python substitution/keyword_cipher/keyword_cipher.py
 ```
 
 > **Requirement:** Python 3 &nbsp;|&nbsp; **Dependencies:** standard library only, unless a script's header says otherwise
@@ -129,6 +136,7 @@ python substitution/monoalphabetic/monoalphabetic.py
 ![](https://img.shields.io/badge/Python-Cryptography_From_Scratch-0b7285?style=flat-square&logo=python&logoColor=white)
 ![](https://img.shields.io/badge/Math-Modular_Arithmetic-0e1621?style=flat-square&logoColor=white)
 ![](https://img.shields.io/badge/Cipher-Monoalphabetic-5b6b7d?style=flat-square&logoColor=white)
+![](https://img.shields.io/badge/Cipher-Keyword_Derivation-5b6b7d?style=flat-square&logoColor=white)
 ![](https://img.shields.io/badge/Practice-Round--Trip_Verification-5b6b7d?style=flat-square&logoColor=white)
 ![](https://img.shields.io/badge/Practice-Key_Handling-d3dbe5?style=flat-square&logoColor=0e1621)
 

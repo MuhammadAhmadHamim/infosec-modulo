@@ -118,6 +118,7 @@ Every script exposes the same pair — **`encrypt(plaintext, key)`** and **`decr
 ```bash
 # Clone the repo
 git clone https://github.com/MuhammadAhmadHamim/infosec-modulo.git
+cd infosec-modulo
 
 # Every script runs standalone from the repo root
 python substitution/caesar/caesar.py

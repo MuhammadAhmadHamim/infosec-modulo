@@ -7,7 +7,7 @@
 ![Language](https://img.shields.io/badge/Language-Python_3-0b7285?style=for-the-badge&logo=python&logoColor=white&labelColor=0e1621)
 ![Focus](https://img.shields.io/badge/Focus-Ciphers_%26_Modular_Arithmetic-5b6b7d?style=for-the-badge&labelColor=0e1621)
 ![Semester](https://img.shields.io/badge/Semester-4-0b7285?style=for-the-badge&labelColor=0e1621)
-![Ciphers](https://img.shields.io/badge/Ciphers-4_Implemented-5b6b7d?style=for-the-badge&labelColor=0e1621)
+![Ciphers](https://img.shields.io/badge/Ciphers-5_Implemented-5b6b7d?style=for-the-badge&labelColor=0e1621)
 ![Status](https://img.shields.io/badge/Status-🔨_Actively_Growing-0b7285?style=for-the-badge&labelColor=0e1621)
 
 <br/><br/>
@@ -38,18 +38,22 @@ Not archived. One cipher lands per lab, and this repo grows with the course.
 ```
 infosec-modulo/
 │
-└── 🔤 substitution/
-        ├── caesar/
-        |   └── caesar.py
-        |
-        ├── monoalphabetic/         
-        |   └── monoalphabetic.py
-        |
-        ├── keyword_cipher/
-        |   └── keyword_cipher.py
-        |
-        └── vigenere/               
-            └── vigenere.py
+├── 🔤 substitution/
+|       ├── caesar/
+|       |   └── caesar.py
+|       |
+|       ├── monoalphabetic/         
+|       |   └── monoalphabetic.py
+|       |
+|       ├── keyword_cipher/
+|       |   └── keyword_cipher.py
+|       |
+|       └── vigenere/               
+|           └── vigenere.py
+|
+└── 🔀 transposition/
+        └── transposition/          
+            └──transposition.py
 ```
 
 Ciphers are grouped by **type**, one folder per cipher. New labs go into the matching group — a new group only appears when a genuinely new category of cipher shows up.
@@ -75,6 +79,20 @@ Ciphers that replace each plaintext symbol with another symbol. The key decides 
 
 </details>
 
+<details>
+<summary><b>🔀 Transposition &nbsp;|&nbsp; Move, Don't Change</b></summary>
+<br/>
+
+Ciphers that rearrange the positions of plaintext symbols without altering them.
+
+| Cipher | Key | Core Idea |
+|---|---|---|
+| **Transposition (token-based)** | A key-driven order | Plaintext symbols are rearranged according to the key; no symbol is changed, only moved |
+
+> *Nothing gets substituted here — which is exactly why the letter frequencies of the ciphertext are identical to the plaintext's.*
+
+</details>
+
 ---
 
 ## ◈ The Math Behind the Name
@@ -84,6 +102,7 @@ Ciphers that replace each plaintext symbol with another symbol. The key decides 
 | **Addition mod 26** | Caesar |
 | **Permutations** | Monoalphabetic substitution |
 | **Constructed permutations** | Keyword cipher |
+| **Permutations** | transposition |
 ---
 
 ## ◈ The Idea in Code
@@ -130,6 +149,7 @@ python substitution/caesar/caesar.py
 python substitution/monoalphabetic/monoalphabetic.py
 python substitution/keyword_cipher/keyword_cipher.py
 python substitution/vigenere/vigenere.py
+python transposition/transposition/transposition.py
 ```
 
 > **Requirement:** Python 3 &nbsp;|&nbsp; **Dependencies:** standard library only, unless a script's header says otherwise
@@ -144,6 +164,7 @@ python substitution/vigenere/vigenere.py
 ![](https://img.shields.io/badge/Math-Modular_Arithmetic-0e1621?style=flat-square&logoColor=white)
 ![](https://img.shields.io/badge/Cipher-Monoalphabetic_%26_Polyalphabetic-5b6b7d?style=flat-square&logoColor=white)
 ![](https://img.shields.io/badge/Cipher-Keyword_Derivation-5b6b7d?style=flat-square&logoColor=white)
+![](https://img.shields.io/badge/Cipher-Transposition-d3dbe5?style=flat-square&logoColor=0e1621)
 ![](https://img.shields.io/badge/Practice-Round--Trip_Verification-5b6b7d?style=flat-square&logoColor=white)
 ![](https://img.shields.io/badge/Practice-Key_Handling-d3dbe5?style=flat-square&logoColor=0e1621)
 

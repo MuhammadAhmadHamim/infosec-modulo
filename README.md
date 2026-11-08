@@ -52,8 +52,7 @@ infosec-modulo/
 |           └── vigenere.py
 |
 └── 🔀 transposition/
-        └── transposition/          
-            └──transposition.py
+        └── transposition.py
 ```
 
 Ciphers are grouped by **type**, one folder per cipher. New labs go into the matching group — a new group only appears when a genuinely new category of cipher shows up.

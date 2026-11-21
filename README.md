@@ -72,7 +72,7 @@ Ciphers that replace each plaintext symbol with another symbol. The key decides 
 | **Caesar** | Monoalphabetic | An integer shift `k` | Shift every letter by a fixed number of positions: `E(x) = (x + k) mod 26` |
 | **Monoalphabetic Substitution** | Monoalphabetic | A full permutation of the alphabet | Each letter maps to a unique letter; the key *is* the mapping |
 | **Keyword Cipher** | Monoalphabetic | A secret keyword | Build the cipher alphabet from the keyword's unique letters, then append the unused letters in order |
-| **Vigenère** | Polyalphabetic | A repeating keyword | Each keyword letter picks a different Caesar shift, flattening letter frequencies |
+| **Vigenère** | Polyalphabetic | A repeating keyword | Each keyword letter picks a different Caesar shift, flattening letter frequencies. Implemented two ways: a counter walking through the keyword, and the keyword extended to the message length |
 
 > *The whole chapter is one escalating argument: fix the shift, scramble the alphabet, then change the shift every letter — each step exists because the one before it was easy to break.*
 
@@ -101,6 +101,7 @@ Ciphers that rearrange the positions of plaintext symbols without altering them.
 | **Addition mod 26** | Caesar |
 | **Permutations** | Monoalphabetic substitution |
 | **Constructed permutations** | Keyword cipher |
+| **Cyclic indexing** | Vigenère |
 | **Permutations** | transposition |
 ---
 

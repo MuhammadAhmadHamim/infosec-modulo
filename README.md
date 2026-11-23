@@ -92,6 +92,19 @@ Ciphers that rearrange the positions of plaintext symbols without altering them.
 
 </details>
 
+<details>
+<summary><b>🧭 On the Roadmap &nbsp;|&nbsp; One Cipher Per Lab</b></summary>
+<br/>
+
+| Cipher | Status |
+|---|:---:|
+| **Playfair** | ⏳ Queued |
+| **Hill** | ⏳ Queued |
+| **Affine** | ⏳ Queued |
+| **Rail Fence / Columnar Transposition** | ⏳ Queued |
+| **Modern ciphers** | ⏳ As the course reaches them |
+
+</details>
 ---
 
 ## ◈ The Math Behind the Name

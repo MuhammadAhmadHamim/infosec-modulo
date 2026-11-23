@@ -105,6 +105,7 @@ Ciphers that rearrange the positions of plaintext symbols without altering them.
 | **Modern ciphers** | ⏳ As the course reaches them |
 
 </details>
+
 ---
 
 ## ◈ The Math Behind the Name
